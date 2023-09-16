@@ -44,6 +44,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/me.css" />
     <link rel="stylesheet" type="text/css" href="css/icomoon.css" />
 
     <link rel="stylesheet" href="./css/main-particles.css" />
@@ -77,7 +78,7 @@
 
       @media (min-width: 991px) {
         nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-          padding-left: 94px;
+          padding-left: 4em;
           padding-top: 40px;
           position: absolute;
           z-index: 999999;
@@ -150,8 +151,16 @@
             </div> -->
             <!-- end home-content__counter -->
 
-            <div class="home-content__text">
-              <h1>Empowering Online Presence: Web Development Experts</h1>
+            <div class="home-content__text content">
+              <h1 class="title">
+                Empowering Online Presence: Web Development Experts
+              </h1>
+              <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+              </div>
               <p>
                 Welcome to our innovative web development and design group,
                 where we are passionate about creating remarkable websites that
@@ -183,7 +192,7 @@
           <!-- end home-social -->
 
           <div class="row home-copyright text-left">
-            <a class="contact-button-home">Get A Quote</a>
+            <a class="bubbly-button">Get A Quote</a>
           </div>
           <!-- end home-copyright -->
           <div class="home-content__line"></div>
@@ -215,7 +224,7 @@
     </div>
     <!--header section end -->
     <!--costume header section start -->
-    <div class="costume_header">
+    <!-- <div class="costume_header">
       <div class="container">
         <div class="menu_main">
           <ul>
@@ -236,7 +245,57 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
+    <div class="navigation">
+      <ul>
+          <li class="list active">
+              <a href="#">
+                  <span class="icon">
+                      <ion-icon name="home-outline"></ion-icon>
+                  </span>
+                  <span class="text">Home</span>
+                  <span class="circle"></span>
+              </a>
+          </li>
+          <li class="list">
+              <a href="#">
+                  <span class="icon">
+                      <ion-icon name="person-outline"></ion-icon>
+                  </span>
+                  <span class="text">Profile</span>
+                  <span class="circle"></span>
+              </a>
+          </li>
+          <li class="list">
+              <a href="#">
+                  <span class="icon">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+                  </span>
+                  <span class="text">Message</span>
+                  <span class="circle"></span>
+              </a>
+          </li>
+          <li class="list">
+              <a href="#">
+                  <span class="icon">
+                      <ion-icon name="camera-outline"></ion-icon>
+                  </span>
+                  <span class="text">Photos</span>
+                  <span class="circle"></span>
+              </a>
+          </li>
+          <li class="list">
+              <a href="#">
+                  <span class="icon">
+                      <ion-icon name="settings-outline"></ion-icon>
+                  </span>
+                  <span class="text">Settings</span>
+                  <span class="circle"></span>
+              </a>
+          </li>
+          <div class="indicator"></div>
+      </ul>
+  </div>
     <!--costume header section end -->
     <!-- define , development LAunch -->
     <div class="layout_padding">
@@ -244,19 +303,29 @@
         <div class="row">
           <h3 class="subhead">what we do</h3>
           <h1 class="display-1">
-            We are a group of design driven individuals passionate about
-            creating beautiful UI designs.
+            We are a group of design and developers driven individuals passionate about
+            creating beautiful websites.
           </h1>
           <br />
           <p class="lead">
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse.
+            Welcome to Webdev Fly, where we transform your digital
+            vision into stunning, high-performance websites. Our team of skilled
+            web developers specializes in crafting custom-coded websites,
+            WordPress wonders, and eCommerce solutions on Shopify. With a
+            passion for design and a dedication to functionality, we're here to
+            help you leave a lasting impression on the digital landscape.
           </p>
+          <h1 class="display-1">
+            Why Choose Us ?
+          </h1>
+          <p class="lead">
+
+              <span style="font-weight: 700;"> Custom-Coded Websites:</span> We believe in uniqueness. Our talented web developers handcraft every aspect of your website, ensuring it's tailored to your brand's personality and requirements. Stand out from the crowd with a website that's as unique as your business.
+              <br><br>
+              <span style="font-weight: 700;"> WordPress Expertise:</span> WordPress is our canvas, and your website is the masterpiece. Our WordPress developers have mastered the art of creating beautiful, user-friendly, and easily manageable websites. We'll empower you with the tools to take control of your online presence.
+              <br><br>
+              <span style="font-weight: 700;"> Shopify eCommerce Mastery:</span> Selling online? We've got you covered. Our Shopify experts understand the intricacies of eCommerce, from creating aesthetically pleasing online stores to optimizing them for conversions. Launch your dream online store with confidence.</li>
+              </p>
         </div>
       </div>
     </div>
@@ -631,6 +700,40 @@
           CsmmFinalCountdown();
         })();
       });
+    </script>
+    <script>
+      var animateButton = function(e) {
+
+e.preventDefault;
+//reset animation
+e.target.classList.remove('animate');
+e.target.classList.add('animate');
+setTimeout(function(){
+e.target.classList.remove('animate');
+},700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+bubblyButtons[i].addEventListener('click', animateButton, false);
+}
+  </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        const list = document.querySelectorAll('.list');
+ 
+ function activeLink() {
+     list.forEach((item) =>
+     item.classList.remove('active'));
+     this.classList.add('active');
+ }
+  
+ list.forEach((item) =>
+ item.addEventListener('click',activeLink));
     </script>
   </body>
 </html>
